@@ -1,1 +1,1 @@
-web: gunicorn app:app --log-file=-
+web: gunicorn Youtube_Notifier:app --log-file=-
