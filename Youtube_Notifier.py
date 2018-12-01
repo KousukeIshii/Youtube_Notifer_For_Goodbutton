@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from flask import Flask, render_template
 import requests
 from bs4 import BeautifulSoup as bs4
@@ -17,7 +19,7 @@ def hello_world():
 	html = requests.get(url)
 	soup = bs4(html.text, "lxml")
 	a = soup.select_one(".expanded-shelf > .branded-page-module-title > a > span > span")
-	if format(a.text == "ライブ配信中") :
+	if format(a.text == u"ライブ配信中") :
 		live_element = soup.select_one("div.expanded-shelf.shelf-item > ul > li > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a")
 		stream_url = "https://www.youtube.com" + live_element.get("href")
 		html = requests.get(stream_url)
