@@ -7,7 +7,7 @@ const start_anime = () => {
 				{value:0,duration:2500,delay:5000}
 				]
 	})
-	sleep(10, update_values)
+	sleep(900, update_values)
 }
  
 const sleep = (waitSeconds, someFunction) => {
