@@ -6,7 +6,8 @@ from bs4 import BeautifulSoup as bs4
 
 last_good = "0"
 cur_good = "0"
-test="https://www.youtube.com/channel/UCyMW-_pfjsTG76c9tP5SErg"
+url="https://www.youtube.com/channel/UCyMW-_pfjsTG76c9tP5SErg" #自分のチャンネルのURLに書き換えてください！
+
 
 app = Flask(__name__)
 
